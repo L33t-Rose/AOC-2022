@@ -8,7 +8,6 @@ const split = text.split("\r\n\r\n").map((str) => {
   }, value);
 });
 
-console.log(Math.max(...split));
 let items = split.sort((a, b) => {
   return b - a;
 });
