@@ -19,6 +19,7 @@ const outcomeLookup: Record<string, Record<string, boolean>> = {
 const LOST = 0;
 const DRAW = 3;
 const WIN = 6;
+
 function evaluate(opponent: string, player: string): number {
   let res = 0;
   // We'd be getting a boolean or undefined

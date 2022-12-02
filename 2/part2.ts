@@ -6,7 +6,7 @@ const LOST = 0;
 const DRAW = 3;
 const WIN = 6;
 
-// Value Lookup Table
+// Value Lookup Table. The definition of X, Y, and Z changed so that
 const lookup: Record<string, number> = {
   A: 1, // Rock
   B: 2, // Paper
@@ -16,8 +16,11 @@ const lookup: Record<string, number> = {
   Z: WIN,
 };
 
+// Lookup table for our desired result.
 const outcomeLookup: Record<string, Record<string, string>> = {
+  // Key: Desired result. X is a lost, Y is a draw, and Z is a win
   X: {
+    // Key: What the opponent chose. Value: What should the player (us) throw as response
     // We need to lose
     A: "C",
     B: "A",
